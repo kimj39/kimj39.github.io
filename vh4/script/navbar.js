@@ -1,7 +1,7 @@
 /* Initially load home page*/
 /* test */
 $(document).ready(function(){
-    $("#content").load("vh4\view\home.html #homePage");
+    $("#content").load("vh4/view/home.html #homePage");
 });
 
 /* Loads corresponding page when selected in Nav Bar */
