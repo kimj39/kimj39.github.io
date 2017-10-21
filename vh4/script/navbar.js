@@ -1,4 +1,5 @@
 /* Initially load home page*/
+/* test */
 $(document).ready(function(){
     $("#content").load("..\view\home.html #homePage");
 });
@@ -10,4 +11,4 @@ $(".navbar").on('click', function(e){
     var myId = e.target.id;  
     $("#content").load(myId + ".html #" + myId + "Page");
   }
-});
+}); 
