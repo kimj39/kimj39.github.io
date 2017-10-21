@@ -1,7 +1,7 @@
 /* Initially load home page*/
 /* test */
 $(document).ready(function(){
-    $("#content").load("..\view\home.html #homePage");
+    $("#content").load("vh4\view\home.html #homePage");
 });
 
 /* Loads corresponding page when selected in Nav Bar */
@@ -9,6 +9,6 @@ $(".navbar").on('click', function(e){
   var myClass = e.target.className;
   if (myClass === "navOp" || myClass === "navText") {
     var myId = e.target.id;  
-    $("#content").load(myId + ".html #" + myId + "Page");
+    $("#content").load("vh4/views/" + myId + ".html #" + myId + "Page");
   }
 }); 
