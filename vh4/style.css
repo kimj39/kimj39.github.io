@@ -19,8 +19,7 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     background-color: goldenrod;
     width: 100%;
-
-    height: inherit;
+    height: 2500px;
     margin: auto;
 }
 
