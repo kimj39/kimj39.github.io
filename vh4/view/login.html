@@ -1,12 +1,239 @@
-<div id = "loginPage"> 
-    <div class="login-container">
-        <h1>Login</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Source+Sans+Pro:300" rel="stylesheet">
+    
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="../resources/assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../resources/assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../resources/assets/css/form-elements.css">
+        
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="../resources/assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../resources/assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../resources/assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../resources/assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="../resources/assets/ico/apple-touch-icon-57-precomposed.png">
+    
+        <style>
+            html{
+    margin:0 auto;
+    height: 2500px;
+
+}
+body {
+    position: absolute;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 1200px;
+    top:1670px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: inherit;
+    margin: auto;
+    background-color: rgba(218, 163, 25, 0.87);
+}
+
+.title {
+    top: 0;
+    z-index:15;
+    position:fixed;
+    width:100%;
+    height: 16%;
+    left:0;
+    text-align: center;
+    background-color: rgba(15,13,7,0.98);
+}
+
+.navbar {
+    font-size: 17px;
+    position: fixed;
+    left: 1%;
+    text-align: center;
+    top:11%;
+    margin: 0 0 0 20%;
+    z-index: 15;
+}
+ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+.navbar li{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+.navbar li:hover {
+    background-color: rgba(113, 94, 15, 0.47);
+}
+
+.navbar input[type=text] {
+    position: fixed;
+    width: 14%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(15,13,7,0.98);
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 2px 12px 10px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.navbar input[type=text]:focus {
+    width: 300px;
+}
+
+#content {
+    z-index: 20;
+    margin: 12% 10% 10% 10%;
+    top: 60%;
+    text-align: center;
+}
+
+.login-container{
+    font-size: 15px;
+}
+
+            </style>
+    
+        <title>College Tour</title>
+    </head>
+
+    <body>
+        <div class = "title">
+            <h1 style="color: gold;">College Tours</h1>
+            <h6 style="color: darkgoldenrod;"> beta version 0.1</h6>
+        </div>
+
+   
+        <div class = "navbar">
+    <ul>
+        <li id = "home" class = "navOp"><a href = "..\..\index.html" >Home</a></li>
+        <li id = "news" class = "navOp"><a href = "..\..\index.html"> News</a></li>
+        <li id = "contact" class = "navOp"><a href = "..\..\index.html"> Contact</a></li>
+        <li id = "about" class = "navOp"><a href = "..\..\index.html"> About</a></li>
+        <li id = "top_College_Destinations" class = "navOp"><a href = "..\..\index.html"> Top College Destinations</a></li>
+        <li id = "top_Guides" class = "navOp"><a href = "vh4\view\top_Guides.html" >Top Guides</a></li>
+        <li id = "list_of_Colleges" class = "navOp"><a href = "..\..\index.html"> List of Colleges</a></li>
+        <li id = "login" class = "navOp"> Login</li>
         <form>
-            <input type="text" name="username" placeholder = "username"><br>
-            <input type="text" name="password" placeholder = "password"><br>
-            </div>
-            <button class="login-main-button" type="submit" value="Login">Login</button>
+            <input type="text" name="search" placeholder="&#x1F50E;  Search..">
         </form>
-        <p class="login-regis">Don't have an account?  <a class= "regis-link" href="/vh4/view/register.html">Register</a></p>
+    </ul>
 </div>
+
+        <!-- Page Content -->  
+        <div id = "content" class = "content-container">
+             <div class="col-sm-5">
+                        	
+                        	<div class="form-box">
+	                        	<div class="form-top">
+	                        		<div class="form-top-left">
+	                        			<h2>Login to our site</h2>
+	                            		<p  style="font-size: 20px">Enter username and password to log on:</p>
+	                        		</div>
+	                        		<div class="form-top-right">
+	                        			<i class="fa fa-key"></i>
+	                        		</div>
+	                            </div>
+	                            <div class="form-bottom">
+				                    <form role="form" action="" method="post" class="login-form">
+				                    	<div class="form-group">
+				                    		<label class="sr-only" for="form-username">Username</label>
+				                        	<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-password">Password</label>
+				                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
+				                        </div>
+				                        <button type="submit" class="btn" style="background-color:black;">Sign in!</button>
+				                    </form>
+			                    </div>
+		                    </div>
+		                
+		                	<div class="social-login">
+	                        	<h3>...or login with:</h3>
+	                        	<div class="social-login-buttons">
+		                        	<a class="btn btn-link-1 btn-link-1-facebook" href="#" style="color:black; font-size: 20px">
+		                        		<i class="fa fa-facebook"></i> Facebook
+		                        	</a>
+		                        	<a class="btn btn-link-1 btn-link-1-twitter" href="#" style="color:black; font-size: 20px">
+		                        		<i class="fa fa-twitter"></i> Twitter
+		                        	</a>
+		                        	<a class="btn btn-link-1 btn-link-1-google-plus" href="#" style="color:black; font-size: 20px">
+		                        		<i class="fa fa-google-plus"></i> Google Plus
+		                        	</a>
+	                        	</div>
+	                        </div>
+	                        
+                        </div>
+
+                        <div class="col-sm-1 middle-border"></div>
+                        <div class="col-sm-1"></div>
+
+                       <div class="col-sm-5">
+                        	
+                        	<div class="form-box">
+                        		<div class="form-top">
+	                        		<div class="form-top-left">
+	                        			<h2>Sign up now</h2>
+	                            		<p style="font-size: 20px">Fill in the form below to get instant access:</p>
+	                        		</div>
+	                        		<div class="form-top-right">
+	                        			<i class="fa fa-pencil"></i>
+	                        		</div>
+	                            </div>
+	                            <div class="form-bottom">
+				                    <form role="form" action="" method="post" class="registration-form">
+				                    	<div class="form-group">
+				                    		<label class="sr-only" for="form-first-name">First name</label>
+				                        	<input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-last-name">Last name</label>
+				                        	<input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-email">Email</label>
+				                        	<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-about-yourself">About yourself</label>
+				                        	<textarea name="form-about-yourself" placeholder="About yourself..." 
+				                        				class="form-about-yourself form-control" id="form-about-yourself"></textarea>
+				                        </div>
+				                        <button type="submit" class="btn" style="background-color:black;">Sign me up!</button>
+				                    </form>
+			                    </div>
+                        	</div>
+                        	
+                        </div> 
+        </div>
+
+        <script src = "vh4\script\navbar.js"></script>
+    </body>
+</html>

@@ -9,7 +9,7 @@ $(".navbar").on('click', function(e){
   var myClass = e.target.className;
   if (myClass === "navOp" || myClass === "navText") {
     var myId = e.target.id;  
-    if (myId !== "top_Guides"){
+    if (myId !== "top_Guides" || myId !== "login"){
     $("#content").load("vh4/view/" + myId + ".html #" + myId + "Page");
     }
   }
