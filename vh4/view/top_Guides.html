@@ -1,5 +1,13 @@
-<div id = "top_GuidesPage">
-   <style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Source+Sans+Pro:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Details of Zeppos</title>
+
+    <style>
+
         /*<below is new>*/
 
         .column {
@@ -84,7 +92,7 @@
         .formContainer {
             position: absolute;
             width: 960px;
-            top: 1800px;
+            top: 87%;
             left: 100px;
             border-radius: 5px;
             background-color: #f2f2f2;
@@ -92,11 +100,36 @@
         }
 
     </style>
+</head>
+<body>
+<div class="title">
+    <h1 style="color: gold;">College Tours</h1>
+    <h6 style="color: darkgoldenrod;"> beta version 0.1</h6>
+</div>
 
-    <div style="position: relative; top: 140px; padding: 20px">Home/Vanderbilt University/Zeppos/Details</div>
+<div class = "navbar">
+    <ul>
+        <li id = "home" class = "navOp">Home</li>
+        <li id = "news" class = "navOp">News</li>
+        <li id = "contact" class = "navOp">Contact</li>
+        <li id = "about" class = "navOp">About</li>
+        <li id = "top_College_Destinations" class = "navOp">Top College Destinations</li>
+        <li id = "top_Guides" class = "navOp">Top Guides</li>
+        <li id = "list_of_Colleges" class = "navOp">List of Colleges</li>
+        <li id = "login" class = "navOp">Login</li>
+        <form>
+            <input type="text" name="search" placeholder="&#x1F50E;  Search..">
+        </form>
+    </ul>
+</div>
+
+
+<!--<start here below is new html file >-->
+
+<div style="position: relative; top: 140px; left: 7%; padding: 20px">Home/Vanderbilt University/Zeppos/Details</div>
 
 <div class="column" style="left: 100px;top: 240px">
-    <img src="download.jpg" alt="Avatar" style="width:100%">
+    <img src="../resources/zeppos.jpg" alt="Avatar" style="width:100%">
     <div class="container">
         <h4><b>Nick Zeppos</b></h4>
         Greater Nashville Area<br>
@@ -115,7 +148,7 @@
     </div>
 </div>
 
-<div class="column" style="left: 400px;top: 240px; width: 700px; height: 570px">
+<div class="column" style="left: 400px;top: 240px; width: 700px; height: 27.8%; overflow: scroll">
     <div class="tab">
         <button class="tablinks" onclick="openCity(event, 'Route#1')" id="defaultOpen">
             <i class="fa fa-map" aria-hidden="true"></i></button>
@@ -132,7 +165,7 @@
         <p>I am extremely thrilled to take you through all the major buildings and explore the fantastic
         Vanderbilt Campus. Everything from Commons dorm experience, dining hall, recreation center,
             foodie places near campus.</p>
-        <img src="zeppos-route1.png" style="padding: 5px; width:540px; display: block; height: auto">
+        <img src="../resources/zeppos-route1.png" style="padding: 5px; width:540px; display: block; height: auto">
     </div>
 
     <div id="Bio" class="tabcontent">
@@ -157,7 +190,7 @@
     </div>
 </div>
 
-<div class="column" style="left: 100px;top: 850px; width: 940px; height: 870px; padding: 30px">
+<div class="column" style="left: 100px;top: 40%; width: 940px; height: 43%; padding: 30px">
     <h1><b>18</b> Reviews </h1>
     <hr>
     <div class="container">
@@ -188,6 +221,8 @@
     </div>
 
 </div>
+<br>
+<br>
 
 <div class="formContainer">
     <form action="/action_page.php">
@@ -229,4 +264,6 @@
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
 </script>
-</div>
+
+</body>
+</html>
