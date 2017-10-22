@@ -78,3 +78,8 @@ li {
 .navbar input[type=text]:focus {
     width: 300px;
 }
+
+#content {
+    top: 10%;
+    text-align: center;
+}
