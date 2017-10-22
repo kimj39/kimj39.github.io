@@ -1,3 +1,251 @@
-<div id = "top_College_DestinationsPage"> 
-   <h1>tcd page</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="..\style.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Source+Sans+Pro:300" rel="stylesheet">
+
+    <title>Colleges in Nashville</title>
+    <style>
+        .column {
+            position: absolute;
+            float: left;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            background-color: floralwhite;
+        }
+
+        .rankingBox {
+            float: left;
+            padding: 4px;
+            border: 1px solid white;
+            font-size: 15px;
+            margin-right: 8px;
+            font-family: "Century Gothic";
+        }
+
+        .switch {
+            position: absolute;
+            right: 5%;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {display:none;}
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #0de314;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #63f3e0;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider {
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            border-radius: 50%;
+        }
+
+        .column .w3-xxlarge:hover {
+            text-decoration: underline;
+            color: blue;
+        }
+        .w3-bar-item i{
+            color: darkgoldenrod;
+        }
+
+        .detailCollege {
+            position: relative;
+            padding: 10px 12px;
+            float: right;
+            width: 650px;
+        }
+    </style>
+</head>
+<body>
+<div class="title">
+    <h1 style="color: gold;">College Tours</h1>
+    <h6 style="color: darkgoldenrod;"> beta version 0.1</h6>
 </div>
+<div class = "navbar">
+    <ul>
+        <li id = "home" class = "navOp"><a href = "..\..\index.html" >Home</a></li>
+        <li id = "news" class = "navOp"><a href = "..\..\index.html"> News</a></li>
+        <li id = "contact" class = "navOp"><a href = "..\..\index.html"> Contact</a></li>
+        <li id = "top_College_Destinations" class = "navOp">Top College Destinations</li>
+        <li id = "top_Guides" class = "navOp"><a href = "..\view\top_Guides.html" >Top Guides</a></li>
+        <li id = "login" class = "navOp"><a href = "..\view\login.html" > Login</a></li>
+        <form>
+            <input type="text" name="search" placeholder="&#x1F50E;  Search..">
+        </form>
+    </ul>
+</div>
+
+<!--NEW-->
+<div style="position: relative; top: 6%; left: 6%; padding: 20px">Home/Search/Colleges near Nashville</div>
+
+<div style="position: absolute; top: 8.5%; width: 100%; padding: 30px; font-size: 25px; background-color: rgba(255,254,239,0.75);
+border-left: 14px solid darkgoldenrod">
+    <i class="fa fa-university" aria-hidden="true"></i><i>&nbsp;Colleges near Nashville, TN...</i>
+</div>
+
+<div class="column" style="left: 24.5%;top: 14%; border: 1px solid black; right: 1%; border-radius: 8px">
+    <ul class="w3-ul w3-card-4">
+        <li class="w3-bar">
+            <img src="..\resources\vandy.jpg" class="w3-bar-item" style="width:100px">
+            <div class="w3-bar-item">
+                <span class="w3-xxlarge">Vanderbilt University</span>
+                <span class="w3-large">Nashville, TN</span><br>
+                <span class="rankingBox">&#x1F3C5; &nbsp;#15 in National Universities</span><br>
+                <span class="detailCollege">Vanderbilt University is a private institution that was founded in 1873. It has a total undergraduate enrollment of 6,871, its setting is urban, and the campus size is 333 acres.It utilizes a semester-based academic calendar. Vanderbilt University's ranking in the 2018 edition ofBest Colleges is National Universities, 14. Its tuition and fees are $47,664 (2017-18).</span>
+                <label class="switch">
+                    <input type="checkbox" id="vandy" value="Vanderbilt" onclick=putOnStack("vandy")>
+                    <span class="slider"></span>
+                    <p style="margin-top: -45%"> Interested?</p>
+                </label>
+            </div>
+        </li>
+
+        <li class="w3-bar">
+            <img src="..\resources\Belmont.jpg" class="w3-bar-item" style="width:100px">
+            <div class="w3-bar-item">
+                <span class="w3-xxlarge">Belmont University</span>
+                <span class="w3-large">Nashville, TN</span><br>
+                <span class="rankingBox">&#x1F3C5; &nbsp;#5 in Regional Universities South</span><br>
+                <span class="detailCollege">Belmont University is a private institution that was founded in 1890. It has a total undergraduate enrollment of 6,293, its setting is urban, and the campus size is 75 acres. It utilizes a semester-based academic calendar. Belmont University's ranking in the 2018 edition of Best Colleges is Regional Universities South, 5. Its tuition and fees are $32,820 (2017-18).</span>
+                <label class="switch">
+                    <input type="checkbox" id="belmont"  value="Belmont" onclick=putOnStack("belmont")>
+                    <span class="slider"></span>
+                    <p style="margin-top: -45%"> Interested?</p>
+                </label>
+            </div>
+        </li>
+
+        <li class="w3-bar">
+            <img src="..\resources\tsu.jpg" class="w3-bar-item" style="width: 100px">
+            <div class="w3-bar-item">
+                <span class="w3-xxlarge">Tennessee State University </span>
+                <span class="w3-large">Nashville, TN</span><br>
+                <span class="rankingBox">&#x1F3C5; &nbsp;#9 in Best College Atheletics in TN</span><br>
+                <span class="detailCollege">Tennessee State University is a public institution that was founded in 1912. It has a total undergraduate enrollment of 7,007, its setting is urban, and the campus size is 520 acres. It utilizes a semester-based academic calendar. Tennessee State University's ranking in the 2018 edition of Best Colleges is National Universities, Tier 2. Its in-state tuition and fees are $7,458 (2017-18); out-of-state tuition and fees are $20,178 (2017-18).</span>
+                <label class="switch">
+                    <input type="checkbox" id="tsu" value="TSU" onclick=putOnStack("tsu")>
+                    <span class="slider"></span>
+                    <p style="margin-top: -45%"> Interested?</p>
+                </label>
+            </div>
+        </li>
+
+        <li class="w3-bar">
+            <img src="..\resources\fisk.jpg" class="w3-bar-item" style="width:100px">
+            <div class="w3-bar-item">
+                <span class="w3-xxlarge">Fisk University </span>
+                <span class="w3-large">Nashville, TN</span><br>
+                <span class="rankingBox">&#x1F3C5; &nbsp;Rank not published</span><br>
+                <span class="detailCollege">Fisk University is a private institution that was founded in 1866. It has a total undergraduate enrollment of 723, its setting is urban, and the campus size is 47 acres. It utilizes a semester-based academic calendar. Fisk University's ranking in the 2018 edition of Best Colleges is National Liberal Arts Colleges, Tier 2. Its tuition and fees are $21,480 (2016-17).</span>
+                <label class="switch">
+                    <input type="checkbox" id="fisk" value="Fisk" onclick=putOnStack("fisk")>
+                    <span class="slider"></span>
+                    <p style="margin-top: -45%"> Interested?</p>
+                </label>
+            </div>
+        </li>
+
+        <li class="w3-bar">
+            <img src="..\resources\tnu.png" class="w3-bar-item" style="width:100px">
+            <div class="w3-bar-item">
+                <span class="w3-xxlarge">Trevecca Nazarene University </span>
+                <span class="w3-large">Nashville, TN</span><br>
+                <span class="rankingBox">&#x1F3C5; &nbsp;Rank not published</span><br>
+                <span class="detailCollege">Trevecca Nazarene University is a private institution that was founded in 1901. It has a total undergraduate enrollment of 2,092, its setting is urban, and the campus size is 75 acres. It utilizes a semester-based academic calendar. Trevecca Nazarene University's ranking in the 2018 edition of Best Colleges is National Universities, Tier 2. Its tuition and fees are $25,100 (2017-18).</span>
+                <label class="switch">
+                    <input type="checkbox" id="trevecca" value="TNU" onclick=putOnStack("trevecca")>
+                    <span class="slider"></span>
+                    <p style="margin-top: -45%"> Interested?</p>
+                </label>
+            </div>
+        </li>
+
+        <li class="w3-bar">
+            <img src="..\resources\lipscomb.jpg" class="w3-bar-item" style="width:100px">
+            <div class="w3-bar-item">
+                <span class="w3-xxlarge">Lipscomb University </span>
+                <span class="w3-large">Nashville, TN</span><br>
+                <span class="rankingBox">&#x1F3C5; &nbsp;#181 in National Universities</span><br>
+                <span class="detailCollege">Lipscomb University is a private institution that was founded in 1891. It has a total undergraduate enrollment of 2,986, its setting is suburban, and the campus size is 89 acres. It utilizes a semester-based academic calendar. Lipscomb University's ranking in the 2018 edition of Best Colleges is National Universities, 181. Its tuition and fees are $30,932 (2017-18).</span>
+                <label class="switch">
+                    <input type="checkbox" id="lipscomb" value="Lipscomb" onclick=putOnStack("lipscomb")>
+                    <span class="slider"></span>
+                    <p style="margin-top: -45%"> Interested?</p>
+                </label>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="column" style="position: fixed; left: 18.5%;top: 43%; border: 1px solid black; border-radius:6px; padding: 8px;
+right: 67%; height: 300px">
+    <h3 style="background-color: #d6aa0a"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Cart: </h3>
+    <div id="cartMsg">
+        [Nothing here yet] Pick the colleges that you are interester in!
+    </div>
+    <div id="cart" style="margin-left: 10%"></div>
+    <input type="submit" id="submitBtn"style="display: none; background-color: white; border-radius: 5px; font-size: 14px"
+           value="Submit to find a tour guide">
+
+</div>
+
+<script>
+    function putOnStack(id) {
+        var a = document.getElementById("cartMsg");
+        a.innerHTML = "";
+        var b = document.getElementById("submitBtn");
+        b.style.display = "block";
+        var c = document.getElementById("cart");
+        var item = document.getElementById(id);
+        if (document.getElementById(id).checked){
+            c.innerHTML += item.value + "</br>";
+        } else {
+            c.innerHTML = (c.innerHTML).replace(item.value+"<br>", "");
+        }
+
+    }
+</script>
+</body>
+</html>

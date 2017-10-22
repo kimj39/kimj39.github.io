@@ -7,9 +7,9 @@ $(document).ready(function(){
 /* Loads corresponding page when selected in Nav Bar */
 $(".navbar").on('click', function(e){
   var myClass = e.target.className;
-  if (myClass === "navOp" || myClass === "navText") {
+  if (myClass === "navOp" || myClass === "navText" ) {
     var myId = e.target.id;  
-    if (myId !== "top_Guides" || myId !== "login"){
+    if (myId !== "top_Guides" || myId !== "login" || myId !== "top_College_Destinations"){
     $("#content").load("vh4/view/" + myId + ".html #" + myId + "Page");
     }
   }
