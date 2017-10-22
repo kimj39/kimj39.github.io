@@ -1,97 +1,294 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Source+Sans+Pro:300" rel="stylesheet">
-    
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
-        <!-- CSS -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Source+Sans+Pro:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- CSS -->
         <link href="..\style.css" rel="stylesheet"> 
-        <style>
-            #contact-form{
-                margin: 0 15% 0 0;
-            }
-            </style>
-    
-        <title>College Tour</title>
-    </head>
+    <title>Details of Zeppos</title>
 
-    <body>
-        <div class = "title">
-            <h1 style="color: gold;">College Tours</h1>
-            <h6 style="color: darkgoldenrod;"> beta version 0.1</h6>
-        </div>
+    <style>
 
-   
-        <div class = "navbar">
-            <ul>
-                <li id = "home" class = "navOp">Home</li>
-                <li id = "news" class = "navOp">News</li>
-                <li id = "contact" class = "navOp">Contact</li>
-                <li id = "about" class = "navOp">About</li>
-                <li id = "top_College_Destinations" class = "navOp">Top College Destinations</li>
-                <li id = "top_Guides" class = "navOp"><a href = "vh4\view\top_Guides.html" >Top Guides</a></li>
-                <li id = "login" class = "navOp"><a href = "vh4\view\login.html" >Login</a></li>
-                <form>
-                    <input type="text" name="search" placeholder="&#x1F50E;  Search..">
-                </form>
-            </ul>
-        </div>
+        /*<below is new>*/
 
-        <!-- Page Content -->  
-        <div id = "content" class = "content-container">
-            <div id = "contactPage"> 
-   <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
-   	<link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
-   	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  
-<section id="contact">
-			<div class="section-content">
-				<h1 class="section-header">Get in <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> Touch with us</span></h1>
-				<h3>Contact Honest Tours with your questions, comments, and concerns</h3>
-			</div>
-			<div class="contact-section">
-			<div class="container">
-				<form id = "contact-form">
-					<div class="col-md-6 form-line">
-			  			<div class="form-group">
-			  				<label for="exampleInputUsername">Your name</label>
-					    	<input type="text" class="form-control" id="" placeholder=" Enter Name">
-				  		</div>
-				  		<div class="form-group">
-					    	<label for="exampleInputEmail">Email Address</label>
-					    	<input type="email" class="form-control" id="exampleInputEmail" placeholder=" Enter Email id">
-					  	</div>	
-					  	<div class="form-group">
-					    	<label for="telephone">Mobile No.</label>
-					    	<input type="tel" class="form-control" id="telephone" placeholder=" Enter 10-digit mobile no.">
-			  			</div>
-			  		</div>
-			  		<div class="col-md-6">
-			  			<div class="form-group">
-			  				<label for ="description"> Message</label>
-			  			 	<textarea  class="form-control" id="description" placeholder="Enter Your Message" rows = "8.5"></textarea>
-			  			</div>
-			  			<div>
+        .column {
+            position: absolute;
+            float: left;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            background-color: floralwhite;
+        }
 
-			  				<button type="button" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
-			  			</div>
-			  			
-					</div>
-				</form>
-			</div>
-		</section>
+        .column i{
+            color: #e7b01e;
+        }
+
+        .container {
+            padding: 10px 16px;
+        }
+
+        /* Style the tab */
+        div.tab {
+            float: left;
+            background-color: #f1f1f1;
+            width: 50px;
+            height: 570px;
+        }
+
+        /* Style the buttons inside the tab */
+        div.tab button {
+            display: block;
+            background-color: inherit;
+            border: none;
+            color: black;
+            padding: 22px 16px;
+            width: 100%;
+            outline: none;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        div.tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current "tab button" class */
+        div.tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            padding: 20px 50px 0 90px;
+            height: inherit;
+        }
+
+
+        .formContainer input[type=text], .formContainer select, .formContainer textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        .formContainer input[type=submit]  {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .formContainer input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .formContainer {
+            position: absolute;
+            width: 960px;
+            top: 87%;
+            left: 100px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .media-left{
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+<div class="title">
+    <h1 style="color: gold;">College Tours</h1>
+    <h6 style="color: darkgoldenrod;"> beta version 0.1</h6>
 </div>
-        </div>
 
-        <script src = "vh4\script\navbar.js"></script>
-    </body>
+<div class = "navbar">
+    <ul>
+        <li id = "home" class = "navOp"><a href = "..\..\index.html" >Home</a></li>
+        <li id = "news" class = "navOp"><a href = "..\..\index.html"> News</a></li>
+        <li id = "contact" class = "navOp"><a href = "..\..\index.html"> Contact</a></li>
+        <li id = "top_College_Destinations" class = "navOp"><a href = "..\..\index.html"> Top College Destinations</a></li>
+        <li id = "top_Guides" class = "navOp">Top Guides</li>
+        <li id = "login" class = "navOp"><a href = "..\view\login.html" > Login</a></li>
+        <form>
+            <input type="text" name="search" placeholder="&#x1F50E;  Search..">
+        </form>
+    </ul>
+</div>
+
+
+<!--<start here below is new html file >-->
+<div style="position: relative; top: 140px; left: 7%; padding: 20px">Home/Vanderbilt University/Zeppos/Details</div>
+
+<div class="column" style="left: 100px;top: 240px">
+    <img src="../resources/zeppos.jpg" alt="Avatar" style="width:100%">
+    <div class="container">
+        <h4><b>Nick Zeppos</b></h4>
+        Greater Nashville Area<br>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <hr>
+        <br class="list-group">
+            <i class="fa fa-phone fa-fw" aria-hidden="true"></i>&nbsp; (615)322-2851<br>
+            <i class="fa fa-envelope fa-fw" aria-hidden="true"></i>&nbsp; chancellor@vanderbilt.edu<br>
+            <i class="fa fa-map-marker fa-fw" aria-hidden="true"></i>&nbsp; 211 Kirkland Hall<br>
+            <i class="fa fa-comments fa-fw" aria-hidden="true"></i>&nbsp; Online!
+        <button>Chat Now!</button><br>
+    </div>
+</div>
+
+<div class="column" style="left: 400px;top: 240px; width: 700px; height: 27.8%; overflow: scroll">
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Route#1')" id="defaultOpen">
+            <i class="fa fa-map" aria-hidden="true"></i></button>
+        <button class="tablinks" onclick="openCity(event, 'Bio')">
+            <i class="fa fa-anchor" aria-hidden="true"></i></button>
+        <button class="tablinks" onclick="openCity(event, 'Perks')">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <div id="Route#1" class="tabcontent">
+        <h2><i class="fa fa-street-view" aria-hidden="true"></i>&nbsp;&nbsp;Highlights of Tour</h2>
+        <hr>
+        <p>I am extremely thrilled to take you through all the major buildings and explore the fantastic
+        Vanderbilt Campus. Everything from Commons dorm experience, dining hall, recreation center,
+            foodie places near campus.</p>
+        <img src="../resources/zeppos-route1.png" style="padding: 5px; width:540px; display: block; height: auto">
+    </div>
+
+    <div id="Bio" class="tabcontent">
+        <h2><i class="fa fa-anchor" aria-hidden="true"></i>&nbsp;&nbsp;My Vanderbilt Experience</h2>
+        <hr>
+        <h3>Nicholas S Zeppos, 8th chancellor</h3>
+        <h4> Faculty, Vanderbilt Law School, '87; BA, History, University of Wisconsin-Madison, '76</h4>
+
+        <p>Nicholas S. Zeppos was named Vanderbilt University’s eighth chancellor on March 1, 2008.  A distinguished legal scholar, teacher and executive, Zeppos served from 2002 to 2008 as Vanderbilt’s chief academic officer, overseeing the university’s undergraduate, graduate and professional education programs as well as research efforts in liberal arts and sciences, engineering, music, education, business, law and divinity.  As provost and vice chancellor, he chaired Vanderbilt’s budgeting and capital planning council and led all fundraising and alumni relations efforts across the institution, in addition to overseeing the dean of students and dean of admissions.</p>
+
+        <p>Zeppos has led a number of important initiatives at Vanderbilt, including the planning processes for The Martha Rivers Ingram Commons, a landmark transformation of the first-year experience; Warren and Moore colleges for upperclassmen; and Vanderbilt Barnard College, the next phase of the university’s unique living-learning residential college system.  Other key advancements include the restructuring of the institution to split out clinical health care operations into a new corporate entity; the Academic Strategic Planning Group; innovative efforts in undergraduate admissions and financial aid; and the development of new programs in Jewish studies, law and economics and genetics.  In February of 2016, Zeppos was honored byInsight Into Diversity magazine for his commitment to diversity and inclusion with its national Giving Back award.</p>
+    </div>
+
+    <div id="Perks" class="tabcontent">
+        <h2>I also provide</h2>
+        <hr>
+        <i class="fa fa-check-square fa-fw" aria-hidden="true"></i>&nbsp; Vanderbilt University, Tennessee State University, Belmont University<br><br>
+        <i class="fa fa-check-square fa-fw" aria-hidden="true"></i>&nbsp; Meal Time :)<br><br>
+        <i class="fa fa-check-square fa-fw" aria-hidden="true"></i>&nbsp; Car<br><br>
+        <i class="fa fa-check-square fa-fw" aria-hidden="true"></i>&nbsp; 1 yr+ tour guide experience<br><br>
+        <i class="fa fa-check-square fa-fw" aria-hidden="true"></i>&nbsp; 20 yr+ life in Vandy
+    </div>
+</div>
+
+<div class="column" style="left: 100px;top: 40%; width: 940px; height: 43%; padding: 30px">
+    <h1><b>18</b> Reviews </h1>
+    <hr>
+    <div class="container">
+        <div class="media-left">
+            <img src="../resources/male3-512.png" class="media-object" style="width:60px">
+        </div>
+        <h3 style="margin-left: 8%"> Alex P., Prospective Student</h3>
+        <p style="margin-top: 3%">May 2017</p>
+        <p>Zeppos is honestly so great! He is really passionat about Vandy and he gave a really nice tour of the campus,
+        the residential life and the Commons experience. He knows every building on campus and knows so many great
+        restaurants nearby. He's the man! I will definitely apply to Vandy! </p>
+        <div class="media-left" style="margin-left: 3%">
+            <img src="../resources/zepposCircle.png" class="media-object" style="width:60px">
+        </div>
+        <h3 style="margin-left: 100px"><i class="fa fa-reply" aria-hidden="true"></i>&nbsp;Nick Zeppos, Tour Guide</h3>
+        <p style="margin-left: 100px">May 2017</p>
+        <p style="margin-left: 100px">Thank you so much Alex! I hope to see you around!</p>
+        <hr>
+        <div class="media-left">
+            <img src="../resources/female1-256.png" class="media-object" style="width:60px">
+        </div>
+        <h3 style="margin-left: 8%"> Anne Pristin, Prospective Student</h3>
+        <p style="margin-top: 4%">September 2016</p>
+        <p>Zeppos knows every building on campus and knows so many great
+            restaurants nearby. He's the man! I will definitely apply to Vandy! </p>
+        <div class="media-left" style="margin-left: 3%">
+            <img src="../resources/zepposCircle.png" class="media-object" style="width:60px">
+        </div>
+        <h3 style="margin-left: 100px"><i class="fa fa-reply" aria-hidden="true"></i>&nbsp;Nick Zeppos, Tour Guide</h3>
+        <p style="margin-left: 100px">May 2017</p>
+        <p style="margin-left: 100px">Thank you so much Alex! I hope to see you around!</p>
+        <hr>
+        <div class="media-left">
+            <img src="../resources/male3-512.png" class="media-object" style="width:60px">
+        </div>
+        <h3 style="margin-left: 8%"> Justin Brown, Prospective Student</h3>
+        <p style="margin-top: 4%">April 2017</p>
+        <p>Zeppos is honestly so great! He is really passionat about Vandy! </p>
+        <div class="media-left" style="margin-left: 3%">
+            <img src="../resources/zepposCircle.png" class="media-object" style="width:60px">
+        </div>
+        <h3 style="margin-left: 100px"><i class="fa fa-reply" aria-hidden="true"></i>&nbsp;Nick Zeppos, Tour Guide</h3>
+        <p style="margin-left: 100px">May 2017</p>
+        <p style="margin-left: 100px">Thank you so much Alex! I hope to see you around!</p>
+        <button style="font-size: 15px; border-radius: 2px; background-color: lightgoldenrodyellow">Click to see more comments</button>
+    </div>
+
+</div>
+
+<div class="formContainer">
+    <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+            <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+            <option value="mexico">Mexico</option>
+            <option value="Brazil">Brazil</option>
+            <option value="australia">Australia</option>
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="Japan">Japan</option>
+            <option value="China">China</option>
+        </select>
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Include your ideal meeting time and your other college tour schedules" style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+
+</body>
 </html>

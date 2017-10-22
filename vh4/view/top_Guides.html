@@ -101,6 +101,10 @@
             padding: 20px;
         }
 
+        .media-left{
+            position: absolute;
+        }
+
     </style>
 </head>
 <body>
@@ -193,35 +197,51 @@
     <h1><b>18</b> Reviews </h1>
     <hr>
     <div class="container">
-        <h3> Alex P., Prospective Student</h3>
-        May 2017
+        <div class="media-left">
+            <img src="../resources/male3-512.png" class="media-object" style="width:60px">
+        </div>
+        <h3 style="margin-left: 8%"> Alex P., Prospective Student</h3>
+        <p style="margin-top: 3%">May 2017</p>
         <p>Zeppos is honestly so great! He is really passionat about Vandy and he gave a really nice tour of the campus,
         the residential life and the Commons experience. He knows every building on campus and knows so many great
         restaurants nearby. He's the man! I will definitely apply to Vandy! </p>
+        <div class="media-left" style="margin-left: 3%">
+            <img src="../resources/zepposCircle.png" class="media-object" style="width:60px">
+        </div>
         <h3 style="margin-left: 100px"><i class="fa fa-reply" aria-hidden="true"></i>&nbsp;Nick Zeppos, Tour Guide</h3>
         <p style="margin-left: 100px">May 2017</p>
         <p style="margin-left: 100px">Thank you so much Alex! I hope to see you around!</p>
         <hr>
-        <h3> Anne Pristin, Prospective Student</h3>
-        May 2017
+        <div class="media-left">
+            <img src="../resources/female1-256.png" class="media-object" style="width:60px">
+        </div>
+        <h3 style="margin-left: 8%"> Anne Pristin, Prospective Student</h3>
+        <p style="margin-top: 4%">September 2016</p>
         <p>Zeppos knows every building on campus and knows so many great
             restaurants nearby. He's the man! I will definitely apply to Vandy! </p>
+        <div class="media-left" style="margin-left: 3%">
+            <img src="../resources/zepposCircle.png" class="media-object" style="width:60px">
+        </div>
         <h3 style="margin-left: 100px"><i class="fa fa-reply" aria-hidden="true"></i>&nbsp;Nick Zeppos, Tour Guide</h3>
         <p style="margin-left: 100px">May 2017</p>
         <p style="margin-left: 100px">Thank you so much Alex! I hope to see you around!</p>
         <hr>
-        <h3> Justin Brown, Prospective Student</h3>
-        May 2017
+        <div class="media-left">
+            <img src="../resources/male3-512.png" class="media-object" style="width:60px">
+        </div>
+        <h3 style="margin-left: 8%"> Justin Brown, Prospective Student</h3>
+        <p style="margin-top: 4%">April 2017</p>
         <p>Zeppos is honestly so great! He is really passionat about Vandy! </p>
+        <div class="media-left" style="margin-left: 3%">
+            <img src="../resources/zepposCircle.png" class="media-object" style="width:60px">
+        </div>
         <h3 style="margin-left: 100px"><i class="fa fa-reply" aria-hidden="true"></i>&nbsp;Nick Zeppos, Tour Guide</h3>
         <p style="margin-left: 100px">May 2017</p>
         <p style="margin-left: 100px">Thank you so much Alex! I hope to see you around!</p>
-        <button style="font-size: larger; border-radius: 2px; background-color: lightgoldenrodyellow">Click to see more comments</button>
+        <button style="font-size: 15px; border-radius: 2px; background-color: lightgoldenrodyellow">Click to see more comments</button>
     </div>
 
 </div>
-<br>
-<br>
 
 <div class="formContainer">
     <form action="/action_page.php">
@@ -233,9 +253,15 @@
 
         <label for="country">Country</label>
         <select id="country" name="country">
-            <option value="australia">Australia</option>
-            <option value="canada">Canada</option>
             <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+            <option value="mexico">Mexico</option>
+            <option value="Brazil">Brazil</option>
+            <option value="australia">Australia</option>
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="Japan">Japan</option>
+            <option value="China">China</option>
         </select>
 
         <label for="subject">Subject</label>
@@ -263,7 +289,6 @@
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
 </script>
-
 
 </body>
 </html>
