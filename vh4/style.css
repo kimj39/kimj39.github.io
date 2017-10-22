@@ -86,4 +86,7 @@ input[type=text]:focus {
     text-align: center;
 }
 
+.login-container {
+    margin: 0 0 0 10%;
+}
 
