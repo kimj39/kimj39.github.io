@@ -96,3 +96,12 @@ a{
 
 }
 
+section {
+    text-align: center;
+    margin: 0 0 0 18%;
+}
+
+.sign{
+    height: 10%;
+}
+
